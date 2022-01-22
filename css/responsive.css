@@ -1,129 +1,315 @@
-@media only screen and (max-width:1024px){
-    
-   /* ***************** testimonial  **************** */
+@media only screen and (max-width: 1250px) {
+  /* ************  Gallery start   ***************** */
 
-  .testimonial-box{
-    padding-bottom:20px;
+  .popup-gallery {
+    width: 1000px;
   }
-    
-   .carousel-inner{
-     height: 300px;
+
+  .popup-gallery .element {
+    width: 1000px;
   }
-  
+
+  /* ******* Gallery end  ********** */
 }
 
+@media only screen and (max-width: 1024px) {
+  /* ************  Gallery start   ***************** */
 
+  .popup-gallery {
+    width: 800px;
+    height: 900px;
+  }
 
+  .popup-gallery .element {
+    width: 800px;
+  }
 
-@media only screen and (max-width:990px){
- 
+  /* ***************** testimonial Start   **************** */
+
+  .testimonial-box {
+    padding-bottom: 20px;
+  }
+
+  .carousel-inner {
+    height: 300px;
+  }
+}
+
+@media only screen and (max-width: 990px) {
   /* *******  Section-5 testimonial start  ******** */
-  
-  .carousel-inner{
+
+  .carousel-inner {
     height: 320px;
   }
-  
-  .carousel-indicators{    
-    margin-bottom: 0px!important;
-  }
-  
-  }
-  
-  
-  
 
+  .carousel-indicators {
+    margin-bottom: 0px !important;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  /* ************  Gallery start   ***************** */
+  .popup-gallery {
+    width: 700px;
+  }
+
+  .popup-gallery .element {
+    width: 700px;
+    /* grid-template-columns: repeat(auto-fit,minmax(250px,1fr)); */
+  }
+}
 
 /* *************  For Navbar ***************** */
 
-@media only screen and (max-width:768px){
+@media only screen and (max-width: 768px) {
+  .header-info {
+    padding-left: 30px;
+  }
 
-    
-    .header-info{
-      padding-left: 30px;
-    }
-        
-      .nav{
-         width: 100%;
-         margin:0px;
-         height: 12vh;
-         justify-content: space-between;
-         padding-left: 20px!important;
-     }
-     
-     .hamburger{
-       display:block;
-       /* margin-left:0px; */
-       z-index: 1000;
-     }
-     
-     .logo-block{
-       position:sticky;
-     }
-    
-     
-      .side-menu ul{
-       margin: 0;
-       position: absolute;
-       padding: 0;
-       top: 0;
-       left:0;
-       width: 100%;
-       height: 100vh;
-       background: var(--title-color);
-       display: flex;
-       flex-direction: column;
-       justify-content: space-evenly;
-       align-items: center;
-       transform: translateX(-120%);
-       transition: .2s;
-       z-index: 999!important;
-     }
-     
-     .side-menu ul.active{
-       transform: translateX(0%);
-     }
+  .nav {
+    width: 100%;
+    margin: 0px;
+  }
+
+  .hamburger {
+    display: block;
+    z-index: 1000;
+  }
 
 
-      /* *******  Section-5 testimonial start  ******** */
+  .logo-block {
+    position: sticky;
+  }
 
-  .carousel-inner{
+  .side-menu{
+    margin: 0;
+    position: absolute;
+    padding: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: var(--title-color);
+    display: flex;
+    transform: translateX(-120%);
+    transition: 0.2s;
+    z-index: 999 !important;
+  }
+
+  .side-menu ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .side-menu.active {
+    transform: translateX(0%);
+  }
+
+
+  /* *******************  Schedule start  *********************** */
+
+
+  .schedule .container{
+      flex-direction: column;
+  }
+
+  .schedule .container p{
+    text-align: center;
+     padding-bottom: 5px;
+  }
+
+  /* *******  Section-5 testimonial start  ******** */
+
+  .carousel-inner {
     height: 320px;
   }
 
-  .testimonial-box{
-    padding:30px 20px;
-  }
-  
-
-  .carousel-indicators{    
-    margin-bottom: 0px!important;
+  .testimonial-box {
+    padding: 30px 20px;
   }
 
+  .carousel-indicators {
+    margin-bottom: 0px !important;
+  }
+
+  /* ************  Gallery start   ***************** */
+  .popup-gallery {
+    width: 550px;
+    height: 2000px;
+  }
+
+  .popup-gallery .element {
+    width: 550px;
+    height: 180px;
+  }
+
+  /* **********************   Contact start   ********************** */
+
+  .contact-flex {
+    padding: 50px 0;
+    display: block;
+    height: auto;
+  }
+
+  .contact-flex .contact-left {
+    width: 100%;
+  }
+
+  .contact-inner-container {
+    padding-top: 0;
+    text-align: center;
+  }
+
+  .contact-block .contact-content-container {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+
+  .contact-block .contact-content-container .contact-content {
+    padding-left: 0;
+    width: 90%;
+  }
+
+  .contact-block .contact-content-container i {
+    width: 10%;
+    font-size: 20px;
+  }
+
+  .contact-block .contact-content-container .contact-content p {
+    max-width: 100%;
+  }
+
+  .contact .footer-social {
+    display: none;
+  }
+
+  .contact-flex .contact-right {
+    width: 95%;
+    margin: auto;
+  }
+
+  form {
+    padding: 30px;
+  }
+
+  .form-button {
+    text-align: center;
+  }
+
+  .footer-social {
+    margin: 0 auto;
+    max-width: 60%;
+  }
+
+  footer .col-12 {
+    padding-bottom: 20px;
+    text-align: center;
+  }
+
+  footer .para {
+    padding-top: 20px;
+    margin: 0 auto;
+    max-width: 90%;
+  }
 }
 
-
-
-
-
-@media only screen and (max-width:500px){
-  
-   /* ***************** testimonial  **************** */
-
-  .testimonial-box{
-    padding:20px;
+@media only screen and (max-width: 600px) {
+  /* ************  Gallery start   ***************** */
+  .popup-gallery {
+    width: 450px;
+    height: 1700px;
   }
-    
-   .carousel-inner{
-     height: 400px;
+
+  .popup-gallery .element {
+    width: 450px;
   }
 }
 
+@media only screen and (max-width: 500px) {
+  .nav-media-container .social-icon-container {
+    max-width: 150px;
+  }
 
-@media only screen and (max-width:400px){
+  .nav-media-container {
+    padding: 0 20px;
+  }
+
+  .nav-call .icon {
+    width: 14px;
+  }
+
+  .nav-call a {
+    font-size: 13px;
+  }
+
+  .nav-media-container .social-icon-block {
+    width: 25px;
+    height: 25px;
+    background: transparent;
+  }
+
+  .nav-media-container .social-icon-block .icon {
+    width: 60%;
+  }
+
+  /* ************  Gallery start   ***************** */
+  .popup-gallery {
+    width: 350px;
+    height: 1600px;
+  }
+
+  .popup-gallery .element {
+    width: 350px;
+  }
+
+  .popup-gallery span {
+    width: 30px;
+    height: 30px;
+    font-size: 10px;
+  }
 
   /* ***************** testimonial  **************** */
-  .carousel-inner{
+
+  .testimonial-box {
+    padding: 20px;
+  }
+
+  .carousel-inner {
+    height: 400px;
+  }
+
+  /* **********************   Contact start   ********************** */
+
+  .contact-inner-container {
+    padding: 20px;
+  }
+
+  .contact .title {
+    font-size: 30px;
+  }
+
+  .contact-flex .contact-right {
+    width: 95%;
+  }
+
+  form {
+    padding: 30px 10px;
+  }
+
+  .footer-bottom .copyright {
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  /* ***************** testimonial  **************** */
+  .carousel-inner {
     height: 550px;
   }
-  
 }

@@ -1,31 +1,48 @@
 $(document).ready(function(){
+    
+  // *********  Window scroll event  ************
+
+      const changeBackground = () =>{      
+        const nav = document.querySelector('.nav');   
+
+        if(window.scrollY >= 150){
+          nav.classList.add('active');
+        }
+        else{
+          nav.classList.remove('active');
+        }
+    }
+
+    window.addEventListener('scroll', changeBackground);
+
 
     // ********* Hamburger Menu  *********
   
     $('.hamburger').on('click',function(){
-    $('.nav-list').toggleClass('active');
-    $('body').toggleClass('active');
-  });
+      $('.side-menu').toggleClass('active');
+      $('body').toggleClass('active');
+
+      $('.span1').toggleClass('active');
+      $('.span2').toggleClass('active');
+    });
   
   
       // Link to content body
   
       const navlinks = document.querySelectorAll('.nav-link');
-      const ul = document.querySelector('.nav-list');
+      const sideMenu = document.querySelector('.side-menu');
       const body = document.querySelector('#body'); 
   
       navlinks.forEach(navlink =>{
       navlink.addEventListener('click',function(){
-          ul.classList.remove('active');
+          sideMenu.classList.remove('active');
           body.classList.remove('active');
       })
     });
   
       })  
       
-      
-   
-   
+        
    // ***********************  Question bars start  ******************************
   
   const sections = document.querySelectorAll('.block-section')
@@ -48,3 +65,69 @@ $(document).ready(function(){
   
     })
   })
+
+
+
+
+
+
+
+
+  // *********************   Gallery start  **********************
+
+
+  let navigation = document.querySelector(".navigation");
+  let view = document.querySelector(".popup-gallery");
+  let content = document.querySelector(".popup-gallery .content");
+  let navcount = content.offsetWidth / view.offsetWidth;
+  let previous = document.querySelector(".previous");
+  let next = document.querySelector(".next");
+  for (let i = 1; i <= navcount; i++) {
+    let num = document.createElement("span");
+      num.className = "num";
+      num.dataset.index = i;
+      // num.textContent = i;
+      next.before(num);
+  }
+
+  navigation.firstElementChild.nextSibling.classList.add("selected");
+  let nums = Array.from(document.querySelectorAll(".num"));
+
+  next.addEventListener("click", function () {
+    let current = document.querySelector(".selected");
+    if (nums.indexOf(current) + 1 < nums.length) {
+      nums.forEach((e) => {
+        e.classList.remove("selected");
+      });
+
+      current.nextElementSibling.classList.add("selected");
+      content.style.transform = `translateX(${
+        current.dataset.index * -view.offsetWidth
+      }px)`;
+    }
+  });
+  previous.addEventListener("click", function () {
+    let current = document.querySelector(".selected");
+    if (nums.indexOf(current) > 0) {
+      nums.forEach((e) => {
+        e.classList.remove("selected");
+      });
+      content.style.transform = `translateX(${
+        (current.dataset.index - 2) * -view.offsetWidth
+      }px)`;
+      current.previousElementSibling.classList.add("selected");
+    }
+  });
+
+  nums.forEach((e) => {
+    e.addEventListener("click", function () {
+      nums.forEach((e) => {
+        e.classList.remove("selected");
+      });
+      e.classList.add("selected");
+      content.style.transform = `translateX(${
+        nums.indexOf(e) * -view.offsetWidth
+      }px)`;
+    });
+  });
+
