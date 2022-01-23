@@ -33,8 +33,6 @@
     <!-- **************  Navbar start  ******************** -->
 
     <nav class="nav">
-        <div class="nav-media-container">
-
             <div class="logo-block">
                 <a href="#">
                   <img class="logo" src="image/logo-small.png" alt="" />
@@ -104,8 +102,6 @@
                     </ul>
                 </div>
             </div>
-
-        </div>
     </nav>
 
     <!-- *********************  Header start   ************************** -->
@@ -658,9 +654,7 @@
                     earum porro, delectus libero nihil voluptatum nisi quo, a
                     repellat, numquam officia? Perspiciatis vitae ea asperiores
                     fugit.dicta exercitationem porro culpa quia sit temporibus,
-                    impedit voluptatem nulla? Eligendi blanditiis earum porro,
-                    delectus libero nihil voluptatum nisi quo, a repellat,
-                    numquam officia? Perspiciatis vitae ea asperiores fugit.
+                    impedit.
                   </p>
 
                   <div class="testimonial-info">
@@ -848,7 +842,7 @@
             </ul>
           </div>
 
-          <div class="col-lg-3 col-md-12 col-12">
+          <div class="col-lg-3 col-md-6 col-12">
             <h4>Follow Us</h4>
             <div class="footer-social">
               <div class="social-icon-container">
@@ -920,19 +914,13 @@
         });
       });
 
-      $(document).ready(function () {
-        $(".popup-vimeo").magnificPopup({
-          disableOn: 700,
-          type: "iframe",
-          mainClass: "mfp-fade",
-          removalDelay: 160,
-          preloader: false,
-
-          fixedContentPos: false,
-        });
-      });
-
       var swiper = new Swiper(".header-container", {
+        loop: true,
+        grabCursor: true,
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: false,
+        },
         pagination: {
           el: ".swiper-pagination",
           clickable: true,
