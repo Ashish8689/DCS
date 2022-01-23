@@ -19,24 +19,28 @@ $(document).ready(function(){
     // ********* Hamburger Menu  *********
   
     $('.hamburger').on('click',function(){
-      $('.side-menu').toggleClass('active');
+      $('.mobile-sidebar').toggleClass('active');
       $('body').toggleClass('active');
-
       $('.span1').toggleClass('active');
       $('.span2').toggleClass('active');
+      $('.span3').toggleClass('active');
     });
   
   
       // Link to content body
   
-      const navlinks = document.querySelectorAll('.nav-link');
-      const sideMenu = document.querySelector('.side-menu');
+      const navlinks = document.querySelectorAll('.link');
+      const mobileSideMenu = document.querySelector('.mobile-sidebar');
       const body = document.querySelector('#body'); 
+      const spans = document.querySelectorAll('.span');
   
       navlinks.forEach(navlink =>{
       navlink.addEventListener('click',function(){
-          sideMenu.classList.remove('active');
-          body.classList.remove('active');
+        mobileSideMenu.classList.remove('active');
+        body.classList.remove("active");
+        spans.forEach(span => (
+          span.classList.remove('active')
+        ));
       })
     });
   
