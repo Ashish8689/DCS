@@ -424,7 +424,7 @@ header .button:hover {
   background: var(--title-color);
 }
 
-header .swiper-pagination-bullet{
+ .swiper-pagination-bullet{
   margin: 0 7px;
   width: 13px;
   height: 13px;
@@ -432,7 +432,7 @@ header .swiper-pagination-bullet{
   border:2px solid var(--title-color);
 }
 
-header .swiper-pagination-bullet-active{
+ .swiper-pagination-bullet-active{
   width: 14px;
   height: 14px;
 }
@@ -755,7 +755,7 @@ header .swiper-pagination-bullet-active{
 }
 
 .testimonial-box {
-  padding: 20px 50px 30px 50px;
+  padding: 20px 50px 0 50px;
   border-radius: 8px;
   box-shadow: 0 0 15px var(--box-shadow);
 }
@@ -790,12 +790,33 @@ header .swiper-pagination-bullet-active{
   color: var(--text-color);
 }
 
-.carousel-inner {
-  height: 300px;
+ .testimonial-box .swiper-container {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  overflow:hidden;
 }
 
-.carousel-item {
+.testimonial-box .swiper-slide {
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+
+  width: 100%;
   height: 100%;
+  position: relative;
 }
 
 .carousel-inner-content {
@@ -805,29 +826,7 @@ header .swiper-pagination-bullet-active{
   justify-content: space-around;
 }
 
-.carousel-indicators {
-  margin-bottom: 0;
-  display: flex;
-  align-items: center;
-  z-index: 1;
-}
 
-.carousel-indicators li {
-  margin: 0 7px;
-  border-radius: 50%;
-  width: 12px;
-  height: 12px;
-  background: var(--main-color);
-  border-bottom: 0;
-  border-top: 0;
-}
-
-.carousel-indicators li.active {
-  width: 14px;
-  height: 14px;
-}
-
-/*  ***** Testimonial End  ***** */
 
 /* **********************   Contact start   ********************** */
 
