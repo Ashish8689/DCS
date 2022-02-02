@@ -13,7 +13,7 @@
   --title-color: #ffffff;
   --title-light-color: #eeeeee;
   --text-color: #252525;
-  --main-color: #3a3285;
+  --main-color: #3C3185;
   --text-light-color: #737373;
   --bold-color: #000000;
   --light-color: #e4e7ef;
@@ -714,7 +714,7 @@ header .button:hover {
 
 .popup-gallery .popup-block {
   width: 100%;
-  height: 100%;
+  height: 310px;
   transition: 0.4s ease-in-out;
 }
 
