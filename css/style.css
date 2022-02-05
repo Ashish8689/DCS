@@ -555,8 +555,11 @@ header .button:hover {
   cursor: pointer;
 }
 
-.service-block-content .service-content-container i {
+.service-block-content .service-content-container svg {
   font-size: 23px;
+  width: 50px;
+  height: 50px;
+  fill: var(--title-color);
   color: var(--title-color);
   opacity: 0.9;
 }
@@ -911,7 +914,7 @@ header .button:hover {
 /* ****************  Social Media Contact ***************** */
 
 .contact .footer-social {
-  width: 220px;
+  width: 150px;
 }
 
 .contact .footer-social .social-icon-container {
@@ -1051,7 +1054,7 @@ footer ul li i {
 }
 
 .footer-social {
-  max-width: 280px;
+  max-width: 200px;
   display: flex;
   justify-content: space-between;
 }
@@ -1143,4 +1146,105 @@ footer ul li i {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.video-grid .popup-video video source{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+
+/* ****************************  What we do Page start  ***************************** */
+
+
+.banner{
+  position: relative;
+  margin-top: 80px;
+  width: 100%;
+  height: 500px;
+  background-size: cover!important;
+  background-position: center!important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner::after{
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.6));
+  z-index: 1;
+}
+
+.banner h1{
+  font-size: 70px;
+  font-weight: 700;
+  color: var(--title-color);
+  opacity: .9;
+  z-index: 2;
+}
+
+.work{
+  width: 100%;
+}
+
+.work .section-flex{
+  display: flex;
+  flex: 100%;
+  flex-wrap: wrap;
+}
+
+.work-2 .section-flex{
+  flex-direction: row-reverse;
+}
+
+.work .section-flex .section-left,
+.work .section-flex .section-right{
+  flex: 50%;
+  position: relative;
+  overflow: hidden;
+}
+
+.work .section-flex .content-container{
+  max-width: 90%;
+  height: 100%;
+  padding-left:50px;
+  display: flex;
+  align-items: center;
+}
+
+.work .section-flex .swiper-container,
+.work .section-flex .swiper-container .swiper-wrapper,
+.work .section-flex .swiper-container .swiper-wrapper .swiper-slide{
+  width: 100%;
+  height: 100%;
+}
+
+.work .section-flex .swiper-container .swiper-wrapper .swiper-slide img{
+ width: 100%;
+ height: 500px;
+ object-fit: cover;
+}
+
+.work .content-inner .title{
+  font-size: 45px;
+  font-weight: 600;
+  color: var(--main-color);  
+  font-family: 'Playfair Display', serif;
+}
+
+.work .content-inner .para{
+  padding-top: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--bold-color);
+  opacity: .65;
+  font-family: 'Raleway', sans-serif;
 }

@@ -80,6 +80,26 @@
     height: 400px;
     background-position: 100% -100px;
   }
+
+
+  /* *****************   What we do start  ************** */
+
+  .banner{
+    height: 400px;
+  }
+
+  .work .section-flex .content-container{
+    max-width: 95%;
+    padding-left:30px;
+  }
+
+  .work .section-flex .swiper-container .swiper-wrapper .swiper-slide img{
+    height: 450px;
+   }
+
+   .work .content-inner .title{
+    font-size: 37px;
+  }
   
 }
 
@@ -135,6 +155,17 @@
   }
 
   .video-banner h1{
+    font-size: 50px;
+  }
+
+
+  /* ***************  What we do start   **************** */
+
+  .banner{
+    height: 350px;
+  }
+
+  .banner h1{
     font-size: 50px;
   }
 
@@ -257,6 +288,48 @@
     margin: 0 auto;
     max-width: 90%;
   }
+
+
+
+  /* ********************  What we do start  *********************** */
+
+  .work{
+    padding:50px 0;
+  }
+  
+  .work .section-flex .section-left{
+    flex: 100%;
+    /* order: 1; */
+  }
+
+  .work .section-flex .section-right{
+    padding-top: 30px;
+    flex: 100%;
+  }
+  
+  .work .section-flex .swiper-container .swiper-wrapper .swiper-slide img{
+    width: 100%;
+    height: 250px;
+   }
+
+
+   .work .section-flex .content-container{
+     max-width: 100%;
+    padding:0 20px;
+  }
+
+  
+  .work .content-inner .title{
+    text-align: center;
+    font-size: 35px;
+  }
+  
+  .work .content-inner .para{
+    margin: 0;
+    text-align: center;
+    font-size: 16px;
+  }
+
 }
 
 @media only screen and (max-width: 600px) {
@@ -311,6 +384,17 @@
     }
 
     .video-banner h1{
+      font-size: 40px;
+    }
+
+    /* ***************  What we Do start   **************** */
+
+    .banner{
+      margin-top: 10vh;
+      height: 300px;
+    }
+
+    .banner h1{
       font-size: 40px;
     }
 }
@@ -395,6 +479,17 @@
   .video-grid {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 20px;
+  }
+
+
+  /* **************  What we do Page  **************** */
+
+  .work .content-inner .title{
+    font-size: 28px;
+  }
+
+  .work .content-inner .para{
+    font-size: 14px;
   }
 
 }
