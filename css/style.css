@@ -546,7 +546,7 @@ header .button:hover {
 
 .service-block .service-block-content .service-content-container {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   margin-bottom: 20px;
 }
 
@@ -555,10 +555,8 @@ header .button:hover {
   cursor: pointer;
 }
 
-.service-block-content .service-content-container svg {
-  font-size: 23px;
-  width: 50px;
-  height: 50px;
+.service-block-content .service-content-container i {
+  font-size: 8px;
   fill: var(--title-color);
   color: var(--title-color);
   opacity: 0.9;
